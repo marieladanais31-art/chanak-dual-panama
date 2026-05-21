@@ -4,59 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dual Diploma para familias en Panamá | Chanak International Academy</title>
-  <style>
-    :root {--navy:#001F3F;--blue:#003B73;--gold:#C8902E;--white:#fff;--soft:#F8FAFC;--text:#11243d;--shadow:0 18px 45px rgba(0,31,63,.14);}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--soft);color:var(--text)}
-    .container{width:min(1160px,92%);margin:0 auto}.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e7edf5}
-    .topbar-wrap{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0;gap:1rem}.brand{display:flex;align-items:center;gap:.7rem}.brand img{height:42px;width:auto}.brand-name{font-weight:700;color:var(--navy)}
-    nav a,.lang a{text-decoration:none;color:#24415f;font-weight:600;margin:.2rem .4rem}.lang .active{color:var(--gold)}
-    .hero{padding:3.5rem 0 1.8rem;background:linear-gradient(135deg,var(--navy),var(--blue))}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.4rem;align-items:stretch}.badge{display:inline-block;background:rgba(200,144,46,.2);color:#fbdca8;font-size:.78rem;border:1px solid rgba(251,220,168,.45);padding:.28rem .62rem;border-radius:999px}
-    h1{color:#fff;font-size:clamp(1.9rem,4.1vw,3rem);margin:.7rem 0}p.hero-sub{color:#d8e6f5;max-width:60ch}.benefits-inline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}
-    .benefit{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.65rem;color:#f0f7ff;font-size:.92rem}
-    .btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}.btn{text-decoration:none;padding:.8rem 1.15rem;border-radius:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
-    .btn-primary{background:var(--gold);color:#1d2430}.btn-secondary{border:1px solid #dbe8f8;color:#fff}.subtext{color:#d8e6f5;font-size:.85rem;margin-top:.5rem}
-    .hero-visual{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:360px;background:linear-gradient(160deg,#ffffff,#dbe9f7);position:relative}
-    .hero-visual img{width:100%;height:100%;object-fit:cover;display:block}
-    .fallback{position:absolute;inset:0;display:none;align-content:center;justify-items:center;padding:1.5rem;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.2),transparent 42%),radial-gradient(circle at 85% 15%,rgba(200,144,46,.35),transparent 46%),linear-gradient(145deg,#001f3f 0%,#003b73 58%,#c8902e 100%);}
-    .fallback-card{width:min(320px,92%);background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.9);border-radius:18px;box-shadow:0 10px 30px rgba(0,20,50,.28);padding:1rem;color:#173153;position:relative}
-    .fallback-card::before{content:"Dual Diploma";position:absolute;top:-12px;right:12px;background:#c8902e;color:#1f2a3a;font-size:.72rem;font-weight:800;padding:.24rem .58rem;border-radius:999px}
-    .fallback-title{margin:.3rem 0 .55rem;font-size:1.02rem;font-weight:800;color:#001f3f}
-    .fallback-list{margin:0;padding-left:1.05rem;color:#27476a;font-size:.9rem;line-height:1.45}
-    .fallback-dot,.fallback-ring{position:absolute;border-radius:999px;opacity:.7}
-    .fallback-dot{width:18px;height:18px;background:#f6d28a;top:22%;left:8%}
-    .fallback-ring{width:92px;height:92px;border:2px dashed rgba(255,255,255,.45);bottom:10%;right:7%}
-    .section{padding:3.2rem 0}.form-card,.trust,.card{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:1.3rem}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.input,textarea,select{width:100%;padding:.75rem;border:1px solid #d8e2ef;border-radius:10px;font:inherit}textarea{min-height:115px}
-    .trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:center}.trust-item{display:flex;gap:.7rem;align-items:center}.trust-item img{height:42px;width:auto}
-    .navy{background:var(--navy)} .navy h2,.navy p,.navy h3{color:#fff}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}
-    .step,.card{border-radius:14px}.step{background:#fff;padding:1rem;text-align:center;font-weight:700;color:#163152}.docs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}
-    footer{background:#081528;color:#dbe8f8;padding:2rem 0;margin-top:2.4rem}
-    @media(max-width:980px){.hero-grid,.form-grid,.grid4,.grid5,.docs,.trust{grid-template-columns:1fr 1fr}.benefits-inline{grid-template-columns:1fr}}
-    @media(max-width:680px){nav{display:none}.hero-grid,.form-grid,.grid4,.grid5,.docs,.trust{grid-template-columns:1fr}}
-  </style>
+  <link rel="stylesheet" href="/style-shared.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18109980849"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent','default',{
-      ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied'
     });
     gtag('js', new Date());
     gtag('config','AW-18109980849');
   </script>
 </head>
 <body>
-<header class="topbar"><div class="container topbar-wrap"><div class="brand"><img src="/public/logo-chanak.png" alt="Chanak International Academy"/><span class="brand-name">Chanak International Academy</span></div><nav><a href="#programa">Programa</a><a href="#beneficios">Beneficios</a><a href="#funciona">Cómo funciona</a><a href="#requisitos">Requisitos</a><a href="#faq">Preguntas frecuentes</a></nav><div class="lang"><a class="active" href="/">ES</a> | <a href="/en/">EN</a></div></div></header>
-<section class="hero" id="programa"><div class="container hero-grid"><div><span class="badge">PARA FAMILIAS EN PANAMÁ</span><h1>Dual Diploma para familias en Panamá</h1><p class="hero-sub">Un camino académico internacional que potencia el futuro de tu hijo con acompañamiento personalizado y flexibilidad total.</p><div class="benefits-inline"><div class="benefit">🌍 Currículo de estándares internacionales</div><div class="benefit">🤝 Acompañamiento personalizado para cada familia</div><div class="benefit">🎓 Preparación universitaria global</div></div><div class="btns"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://buy.stripe.com/5kQcN6d7z9pj5Vm3RU67S0e">Iniciar matrícula directa</a><a class="btn btn-secondary" href="#formulario">Solicitar información</a></div><div class="subtext">Pago seguro con Stripe</div></div><div class="hero-visual"><img src="/public/family-panama.jpg" alt="Familia en Panamá explorando el programa Dual Diploma de Chanak International Academy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"/><div class="fallback"><span class="fallback-dot" aria-hidden="true"></span><span class="fallback-ring" aria-hidden="true"></span><div class="fallback-card"><p class="fallback-title">Tu familia puede iniciar hoy</p><ul class="fallback-list"><li>Ruta académica internacional.</li><li>Acompañamiento cercano para padres y estudiantes.</li><li>Flexibilidad para avanzar desde Panamá.</li></ul></div></div></div></div></section>
-<main>
-<section class="section"><div class="container form-card" id="formulario"><h2>Solicita información personalizada</h2><p>Completa el formulario y uno de nuestros asesores te contactará.</p><iframe title="Brevo Español" src="BREVO_FORM_URL_PANAMA_ES" style="width:100%;min-height:560px;border:1px solid #d7e1ee;border-radius:14px"></iframe><p><strong>Placeholder actual:</strong> BREVO_FORM_URL_PANAMA_ES</p><div class="form-grid"><input class="input" placeholder="Nombre del responsable"/><input class="input" placeholder="Email"/><input class="input" placeholder="WhatsApp"/><input class="input" placeholder="Nombre del estudiante"/><select class="input"><option>Nivel escolar</option></select><input class="input" placeholder="Colegio actual (opcional)"/><textarea placeholder="Mensaje"></textarea><label><input type="checkbox"/> Acepto la política de privacidad.</label></div><div class="btns"><button class="btn btn-primary" type="button">Enviar solicitud</button></div></div></section>
-<section class="section"><div class="container trust"><div class="trust-item"><img src="/public/logo-chanak.png" alt="Chanak"/><div><strong>Chanak International Academy</strong></div></div><div class="trust-item"><img src="/public/fldoe.png" alt="FLDOE"/><div><strong>Florida Department of Education</strong><br/>FLDOE #134620</div></div><div class="trust-item"><img src="/public/msa-candidate.png" alt="MSA"/><div><strong>Middle States Association</strong><br/>Official Candidate for Accreditation</div></div></div></section>
-<section class="section navy" id="beneficios"><div class="container"><h2>Beneficios para tu familia</h2><div class="grid4"><article class="card"><h3>Doble titulación</h3><p>Obtén el diploma panameño y el diploma estadounidense.</p></article><article class="card"><h3>Flexibilidad total</h3><p>Estudia a tu ritmo desde casa con acompañamiento experto y clases en línea.</p></article><article class="card"><h3>Ruta personalizada</h3><p>Plan académico adaptado a las metas y talentos de tu hijo.</p></article><article class="card"><h3>Acceso global</h3><p>Mejores oportunidades universitarias y profesionales en todo el mundo.</p></article></div></div></section>
-<section class="section" id="funciona"><div class="container"><h2>Cómo funciona</h2><div class="grid5"><div class="step">1. Solicita información</div><div class="step">2. Evaluamos tu caso</div><div class="step">3. Inicias tu camino</div><div class="step">4. Estudias con guía</div><div class="step">5. Obtienes tu diploma</div></div></div></section>
-<section class="section" id="requisitos"><div class="container"><h2>Prepara estos documentos</h2><div class="docs"><div class="card">Copia de cédula o pasaporte del responsable</div><div class="card">Copia de cédula o pasaporte del estudiante</div><div class="card">Boletín académico más reciente</div><div class="card">Certificado de nacimiento</div><div class="card">Otros documentos si aplica</div></div></div></section>
-<section class="section"><div class="container card"><h2>Da el primer paso hacia una ruta académica internacional</h2><p>Puedes solicitar información personalizada o iniciar directamente el proceso de matrícula.</p><div class="btns"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://buy.stripe.com/5kQcN6d7z9pj5Vm3RU67S0e">Iniciar matrícula directa</a><a class="btn btn-secondary" href="#formulario" style="color:#163152;border-color:#163152">Solicitar información</a></div></div></section>
-<section class="section" id="faq"><div class="container card"><h2>Preguntas frecuentes</h2><p><strong>¿Es para colegios?</strong> No, esta landing está diseñada exclusivamente para familias en Panamá.</p></div></section>
-</main>
-<footer><div class="container"><strong>Chanak International Academy</strong><br/>dualdiploma@chanakacademy.org<br/>FLDOE #134620<br/>MSA-CESS Official Candidate for Accreditation<br/>Chanak Foundation / Nonprofit 501(c)(3)</div></footer>
+  <header class="topbar">
+    <div class="container topbar-wrap">
+      <a class="brand" href="/" aria-label="Chanak International Academy">
+        <img src="/public/logo-chanak.png" alt="Chanak International Academy" />
+        <span class="brand-name">Chanak International Academy</span>
+      </a>
+      <nav>
+        <a href="#programa">Programa</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#funciona">Cómo funciona</a>
+        <a href="#requisitos">Requisitos</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </nav>
+      <div class="lang"><a class="active" href="/">ES</a> | <a href="/en">EN</a></div>
+    </div>
+  </header>
+
+  <section class="hero" id="programa">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">PARA FAMILIAS EN PANAMÁ</span>
+        <h1>Dual Diploma para familias en Panamá</h1>
+        <p class="hero-sub">Un camino académico internacional que potencia el futuro de tu hijo con acompañamiento personalizado y flexibilidad total.</p>
+        <div class="benefits-inline">
+          <div class="benefit">Currículo de estándares internacionales</div>
+          <div class="benefit">Acompañamiento personalizado para cada familia</div>
+          <div class="benefit">Preparación universitaria global</div>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://buy.stripe.com/5kQcN6d7z9pj5Vm3RU67S0e">Iniciar matrícula directa</a>
+          <a class="btn btn-secondary" href="#formulario">Solicitar información</a>
+        </div>
+        <p class="subtext">Pago seguro con Stripe</p>
+      </div>
+      <div class="hero-visual">
+        <img src="/public/family-panama.jpg" alt="Familia en Panamá explorando el programa Dual Diploma de Chanak International Academy" />
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container trust">
+        <div class="trust-item"><img src="/public/logo-chanak.png" alt="Chanak International Academy" /><div><strong>Chanak International Academy</strong></div></div>
+        <div class="trust-item"><img src="/public/fldoe.png" alt="Florida Department of Education" /><div><strong>Florida Department of Education</strong><br />FLDOE #134620</div></div>
+        <div class="trust-item"><img src="/public/msa-candidate.png" alt="Middle States Association" /><div><strong>Middle States Association</strong><br />Official Candidate for Accreditation</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="formulario">
+      <div class="container form-card">
+        <h2>Solicita información personalizada</h2>
+        <p>Completa el formulario y uno de nuestros asesores te contactará para orientarte sobre el Dual Diploma para familias en Panamá.</p>
+        <iframe
+          title="Formulario Brevo Dual Diploma Panamá"
+          src="https://95f6305c.sibforms.com/serve/MUIFAHl_lRsq1wflUXDTq-e18hPx6VAw5gygVcxwwkRBS9U-46p0j2hjECffhKCVn0Lxv8TQT_ASnA7k6eE247HgNQdME-dZOAPngGOrPretvDUAR9eghG0e4N9fsWfIyMHjrJUesHiApNcN1-5zunpYMxxerOGSa4TZ0616w6AfeqxE1rjwV-ZaS8bBhD6F9LTldNx3A-uCiXZeww=="
+          width="100%"
+          height="520"
+          frameborder="0"
+          scrolling="auto"
+          style="width:100%;min-height:520px;border:1px solid #d7e1ee;border-radius:16px;background:white;"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="section navy" id="beneficios">
+      <div class="container">
+        <h2>Beneficios para tu familia</h2>
+        <div class="grid4">
+          <article class="card"><h3>Doble titulación</h3><p>Obtén el diploma panameño y el diploma estadounidense.</p></article>
+          <article class="card"><h3>Flexibilidad total</h3><p>Estudia a tu ritmo desde casa con acompañamiento experto y clases en línea.</p></article>
+          <article class="card"><h3>Ruta personalizada</h3><p>Plan académico adaptado a las metas y talentos de tu hijo.</p></article>
+          <article class="card"><h3>Acceso global</h3><p>Mejores oportunidades universitarias y profesionales en todo el mundo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="funciona"><div class="container"><h2>Cómo funciona</h2><div class="grid5"><div class="step">1. Solicita información</div><div class="step">2. Evaluamos tu caso</div><div class="step">3. Inicias tu camino</div><div class="step">4. Estudias con guía</div><div class="step">5. Obtienes tu diploma</div></div></div></section>
+    <section class="section" id="requisitos"><div class="container"><h2>Prepara estos documentos</h2><div class="docs"><div class="card">Copia de cédula o pasaporte del responsable</div><div class="card">Copia de cédula o pasaporte del estudiante</div><div class="card">Boletín académico más reciente</div><div class="card">Certificado de nacimiento</div><div class="card">Otros documentos si aplica</div></div></div></section>
+    <section class="section"><div class="container card cta-card"><h2>Da el primer paso hacia una ruta académica internacional</h2><p>Puedes solicitar información personalizada o iniciar directamente el proceso de matrícula.</p><div class="btns"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://buy.stripe.com/5kQcN6d7z9pj5Vm3RU67S0e">Iniciar matrícula directa</a><a class="btn btn-secondary dark" href="#formulario">Solicitar información</a></div></div></section>
+    <section class="section" id="faq"><div class="container card"><h2>Preguntas frecuentes</h2><p><strong>¿Es para colegios?</strong> No, esta landing está diseñada exclusivamente para familias en Panamá.</p></div></section>
+  </main>
+
+  <footer><div class="container"><strong>Chanak International Academy</strong><br />dualdiploma@chanakacademy.org<br />FLDOE #134620<br />MSA-CESS Official Candidate for Accreditation<br />Chanak Foundation / Nonprofit 501(c)(3)</div></footer>
 </body>
 </html>
