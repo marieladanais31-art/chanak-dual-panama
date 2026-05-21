@@ -2,9 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/index" },
-    { "source": "/en", "destination": "/en/index" },
-    { "source": "/gracias", "destination": "/gracias/index" },
-    { "source": "/en/thank-you", "destination": "/en/thank-you/index" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/en", "destination": "/en/index.html" },
+    { "source": "/gracias", "destination": "/gracias/index.html" },
+    { "source": "/en/thank-you", "destination": "/en/thank-you/index.html" }
   ]
 }
