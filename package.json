@@ -2,6 +2,7 @@
   "name": "chanak-dual-panama",
   "private": true,
   "scripts": {
-    "build": "echo 'Static landing build check passed'"
+    "build": "echo 'No build step required for this static site'",
+    "vercel-build": "echo 'No build step required for this static site'"
   }
 }
