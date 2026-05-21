@@ -1,10 +1,12 @@
 {
-  "cleanUrls": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/en", "destination": "/en/index.html" },
-    { "source": "/gracias", "destination": "/gracias/index.html" },
-    { "source": "/en/thank-you", "destination": "/en/thank-you/index.html" }
+  "cleanUrls": false,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/en/?$", "dest": "/en/index.html" },
+    { "src": "^/gracias/?$", "dest": "/gracias/index.html" },
+    { "src": "^/en/thank-you/?$", "dest": "/en/thank-you/index.html" }
   ]
 }
