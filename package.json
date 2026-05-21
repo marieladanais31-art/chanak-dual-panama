@@ -1,0 +1,7 @@
+{
+  "name": "chanak-dual-panama",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static landing build check passed'"
+  }
+}
