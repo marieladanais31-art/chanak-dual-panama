@@ -2,6 +2,7 @@
   "name": "chanak-dual-panama",
   "private": true,
   "scripts": {
-    "build": "echo 'Static site: no build artifacts generated (serve repository root)'"
+    "build": "echo 'Static site: no build artifacts generated (serve repository root)'",
+    "vercel-build": "npm run build"
   }
 }
