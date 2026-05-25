@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrollment Application — Dual Diploma Panama</title>
+  <link rel="stylesheet" href="/style-shared.css" />
+  <style>
+    .enrollment-wrap { max-width: 920px; margin: 2rem auto; }
+    .notice { background:#fff7e6;border:1px solid #f2d28a;border-radius:12px;padding:1rem;margin-bottom:1rem; }
+    fieldset { border:1px solid #d7e1ee;border-radius:12px;padding:1rem;margin-bottom:1rem;background:#fff; }
+    legend { font-weight:700;padding:0 .5rem; }
+    .grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    label { display:block; font-weight:600; margin-bottom:.25rem; }
+    input, select, textarea { width:100%; border:1px solid #c8d4e3; border-radius:10px; padding:.65rem; font:inherit; }
+    .checks label { font-weight:500; display:flex; gap:.5rem; align-items:flex-start; margin:.5rem 0; }
+    .checks input { width:auto; margin-top:.2rem; }
+    .status { margin-top:1rem; font-weight:600; }
+  </style>
+</head>
+<body>
+<header class="topbar"><div class="container topbar-wrap"><a class="brand" href="/en"><img src="/public/logo-chanak.png" alt="Chanak International Academy" /><span class="brand-name">Chanak International Academy</span></a></div></header>
+<main class="container enrollment-wrap">
+  <h1>Enrollment Application — Dual Diploma Panama</h1>
+  <p>Complete this application to begin the Initial Academic Evaluation. The academic team at Chanak International Academy will review the student’s profile and prepare a personalized route toward the American Dual Diploma.</p>
+  <div class="notice">The Initial Academic Evaluation has a cost of USD $50. This payment allows our academic team to review the student’s records, assess the academic profile, and prepare initial route guidance. Final enrollment is confirmed after the evaluation.</div>
+
+  <form id="enrollment-form">
+    <fieldset><legend>SECTION 1: Student Information</legend><div class="grid">
+      <div><label>Student full name *<input required name="student_full_name" /></label></div>
+      <div><label>Date of birth *<input required type="date" name="date_of_birth" /></label></div>
+      <div><label>Age *<input required type="number" min="1" name="age" /></label></div>
+      <div><label>Nationality<input name="nationality" /></label></div>
+      <div><label>Country of residence *<input required name="country_residence" /></label></div>
+      <div><label>City / province *<input required name="city_province" /></label></div>
+      <div><label>Current grade *<input required name="current_grade" /></label></div>
+      <div><label>Current school in Panama<input name="current_school_panama" /></label></div>
+      <div><label>Type of school *<select required name="school_type"><option value="">Select...</option><option>Christian</option><option>Bilingual</option><option>International</option><option>Private</option><option>Homeschool</option><option>Other</option></select></label></div>
+      <div><label>Is the student currently enrolled in school? *<select required name="enrolled_currently"><option value="">Select...</option><option>Yes</option><option>No</option></select></label></div>
+    </div></fieldset>
+
+    <fieldset><legend>SECTION 2: Parent or Guardian Information</legend><div class="grid">
+      <div><label>Parent / guardian full name *<input required name="guardian_name" /></label></div><div><label>Relationship to student *<input required name="relationship" /></label></div><div><label>Main email *<input required type="email" name="main_email" /></label></div><div><label>WhatsApp *<input required name="whatsapp" /></label></div><div><label>Country *<input required name="guardian_country" /></label></div><div><label>City *<input required name="guardian_city" /></label></div><div><label>Best time to contact<input name="best_contact_time" /></label></div>
+    </div></fieldset>
+
+    <fieldset><legend>SECTION 3: Academic Route of Interest</legend><div class="grid">
+      <div><label>Route of interest *<select required name="route_interest"><option value="">Select...</option><option>7th–8th grade: Preparatory leveling</option><option>9th grade: 4-year route</option><option>10th grade: 3-year route</option><option>11th grade: 2-year route</option><option>Not sure, I need guidance</option></select></label></div>
+      <div><label>Main goal *<select required name="main_goal"><option value="">Select...</option><option>Strengthen academic English</option><option>Earn an American diploma</option><option>International university preparation</option><option>Academic organization</option><option>Personalized academic support</option><option>Other</option></select></label></div>
+      <div><label>Interested in universities outside Panama?<select name="outside_panama"><option>Yes</option><option>No</option><option>Not sure</option></select></label></div>
+      <div><label>Countries of university interest<select name="university_countries"><option>United States</option><option>Canada</option><option>Europe</option><option>Panama</option><option>Other</option></select></label></div>
+    </div></fieldset>
+
+    <fieldset><legend>SECTION 4: Academic Level and English</legend><div class="grid">
+      <div><label>Approximate English level *<select required name="english_level"><option value="">Select...</option><option>Basic</option><option>Intermediate</option><option>Advanced</option><option>Not sure</option></select></label></div>
+      <div><label>Has the student studied in English before? *<select required name="studied_in_english"><option value="">Select...</option><option>Yes</option><option>No</option><option>Partially</option></select></label></div>
+      <div><label>Student’s academic strengths<textarea name="strengths"></textarea></label></div>
+      <div><label>Areas where the student needs support<textarea name="support_areas"></textarea></label></div>
+      <div><label>Has the student repeated a grade?<select name="repeated_grade"><option>Yes</option><option>No</option></select></label></div>
+      <div><label>Important educational needs or academic accommodations<textarea name="accommodations"></textarea></label></div>
+    </div></fieldset>
+
+    <fieldset><legend>SECTION 5: Academic Documents</legend>
+      <label>Paste a Google Drive link with the student’s academic documents.<textarea name="documents_drive_link"></textarea></label>
+      <label>Additional comments<textarea name="additional_comments"></textarea></label>
+      <p><em>If you do not have all documents now, you may still submit the application and our team will tell you what is missing.</em></p>
+    </fieldset>
+
+    <fieldset class="checks"><legend>SECTION 6: Required Confirmations</legend>
+      <label><input required type="checkbox" name="confirm_complementary_program" /> I understand that the Dual Diploma is a complementary program and does not replace the Panamanian national curriculum.</label>
+      <label><input required type="checkbox" name="confirm_credit_recognition" /> I understand that credit recognition is not automatic and depends on the individual review of the academic record.</label>
+      <label><input required type="checkbox" name="confirm_evaluation_cost" /> I understand that the Initial Academic Evaluation has a cost of USD $50.</label>
+      <label><input required type="checkbox" name="confirm_route_plan" /> I understand that the Personalized Route Plan is prepared after the academic information is reviewed.</label>
+      <label><input required type="checkbox" name="confirm_contact" /> I agree to be contacted by Chanak International Academy.</label>
+      <label><input required type="checkbox" name="confirm_privacy" /> I accept the Privacy Policy.</label>
+    </fieldset>
+
+    <button class="btn btn-primary" type="submit">Submit application and pay $50 Evaluation</button>
+    <div class="status" id="status"></div>
+  </form>
+</main>
+<script>
+const form = document.getElementById('enrollment-form');
+const statusEl = document.getElementById('status');
+const PAYMENT_URL = 'https://buy.stripe.com/8x28wQ3wZ30VcjK3RU67S0f';
+const ENDPOINT = '/api/matricula';
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.textContent = 'Submitting application…';
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.language = 'English';
+  data.emailSubject = 'New enrollment application — Dual Diploma Panama';
+  try {
+    const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    if (!res.ok) throw new Error('submit failed');
+    statusEl.textContent = 'Application received. You will now be redirected to the secure payment for the Initial Academic Evaluation.';
+    setTimeout(() => { window.location.href = PAYMENT_URL; }, 1200);
+  } catch (error) {
+    statusEl.textContent = 'We could not submit your application. Please email dualdiploma@chanakacademy.org.';
+  }
+});
+</script>
+</body>
+</html>

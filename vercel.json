@@ -17,6 +17,10 @@
     {
       "source": "/en/thank-you",
       "destination": "/en/thank-you/index.html"
+    },
+    {
+      "source": "/en/matricula",
+      "destination": "/en/matricula.html"
     }
   ]
 }
